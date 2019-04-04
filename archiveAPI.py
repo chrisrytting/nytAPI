@@ -33,6 +33,14 @@ class ArchiveAPI():
         except:
             print('No Resp')
 
+    def json_to_dataframe(self, json_file):
+        """
+        json_file:  a .json file which has been pulled from the Archive API and serialized in JSON format.
+        """
+        with open(json_file) as json_file:  
+            data = json.load(json_file)
+        return pd.DataFrame.from_dict(data['docs'])
+
 if __name__ == '__main__':
     print(sys.argv)
     if len(sys.argv) != 4:
