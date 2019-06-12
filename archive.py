@@ -1,6 +1,5 @@
-import archiveAPI
+import sys
 
 
-
-box = archiveAPI.ArchiveAPI(API_KEY)
-box.
+if __name__ == '__main__':
+    print(sys.argv)
